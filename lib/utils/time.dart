@@ -1,17 +1,14 @@
 class Time{
-  late DateTime dateTime;
+  static DateTime dateTime=DateTime.now();
 
-  Time(){
-    dateTime= DateTime.now();
-  }
 
-  String getYMD(){
+static  String getYMD(){
     String ymd="${dateTime.year}.${dateTime.month}.${dateTime.day}";
     return ymd;
   }
 
-  String getDayInWeek(){
-    List<String> days =["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+ static String getDayInWeek(){
+    List<String> days =["","周一", "周二", "周三", "周四", "周五","周六"];
    return days[dateTime.weekday];
   }
 }
