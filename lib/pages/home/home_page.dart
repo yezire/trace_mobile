@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:trace_mobile/pages/home/components/body.dart';
+import '../../style/color.dart';
+import 'components/default_body.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Stack(
+      body: Container(
+        color:kBackground,
+        child:
+      Stack(
           children: [
             Positioned(
               left: 21.w,
-              child: Body(),
+              child:DefaultBody(),
             ),
           Positioned(
             height:67.h,
@@ -25,7 +30,6 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(28),
                 ),
                 elevation: 3,
-
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -49,6 +53,6 @@ class HomePage extends StatelessWidget {
               )
         ],
       ),
-    );
+      ));
   }
 }

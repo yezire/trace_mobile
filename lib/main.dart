@@ -20,10 +20,11 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            // theme: ThemeData(
-            //   scaffoldBackgroundColor: Colors.white,
-            //   visualDensity: VisualDensity.adaptivePlatformDensity,
-            // ),
+            theme: ThemeData(
+              fontFamily: "Noto_Serif_SC",
+              // scaffoldBackgroundColor: Colors.white,
+              // visualDensity: VisualDensity.adaptivePlatformDensity,
+            ),
             initialRoute:
            Routes.homePage,
             // initialRoute: Routes.homeScreen,
